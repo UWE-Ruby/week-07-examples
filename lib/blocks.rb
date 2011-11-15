@@ -1,19 +1,12 @@
 
-
-
-
-def map_this(array)
-  
-  array.each do |element|
-    puts yield(element) if block_given?
-  end
-  
-end
-
-def render_header_and_footer_around
+def render_around
   
   rendered_string = "[HEADER]"
-  rendered_string = "#{rendered_string}\n[#{yield}]" if block_given?
+  
+  if block_given?
+    rendered_string = "#{rendered_string}\n[#{yield}]"
+  end
+  
   rendered_string = "#{rendered_string}\n[FOOTER]"
   
 end
