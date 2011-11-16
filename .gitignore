@@ -1,1 +1,4 @@
 Gemfile.lock
+
+# To ensure that no one checks in their Amazon S3 file
+s3.yml
