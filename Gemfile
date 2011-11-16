@@ -1,6 +1,11 @@
 source :rubygems
 
 gem 'rake'
+gem 'unhappymapper'
+gem 'aws-s3'
+gem 'sinatra'
+gem 'geocoder'
+gem 'multi_json'
 
 group :test do
   gem 'rspec'
