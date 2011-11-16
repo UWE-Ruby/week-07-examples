@@ -6,6 +6,7 @@ gem 'aws-s3'
 gem 'sinatra'
 gem 'geocoder'
 gem 'multi_json'
+gem 'rmagick'
 
 group :test do
   gem 'rspec'

@@ -19,6 +19,12 @@ task :amazon do
   system "bundle exec ruby lib/amazon.rb"
 end
 
+desc "Runs a small JSON example"
 task :json do
   system "bundle exec ruby lib/json_response.rb"
+end
+
+desc "Imagemagick example"
+task :image do
+  system "bundle exec ruby lib/images.rb"
 end
