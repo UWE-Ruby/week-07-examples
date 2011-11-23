@@ -19,7 +19,7 @@ settings = Configuration.load('development','s3.yml')
 
 # This is the call to establish the connection to Amazon S3.
 
-Base.establish_connection! :access_key_id => settings.access_key_id,
+AWS::S3::Base.establish_connection! :access_key_id => settings.access_key_id,
     :secret_access_key => settings.secret_access_key
 
 #
@@ -29,7 +29,7 @@ Base.establish_connection! :access_key_id => settings.access_key_id,
 name_of_file_on_amazon = "README.md"
 name_of_local_file = "README.md"
 
-S3Object.store name_of_file_on_amazon,
+AWS::S3::S3Object.store name_of_file_on_amazon,
   File.open(name_of_local_file,'r'),
   settings.bucket,
   :access => :public_read
